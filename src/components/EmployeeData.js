@@ -6,8 +6,14 @@ import SearchBar from "./SearchBar"
 export default class EmployeeData extends Component {
     state = {
         employees: [{}],
-        filteredEmployees: [{}]
+        filteredEmployees: [{}],
+      
     }
+
+    handleSort = tableLabel => {
+        console.log(tableLabel)
+    }
+
     handleSearch = e => {
         const filteredEmployeesList = this.state.employees.filter(employee => {
             let name = `${employee.name.title}${employee.name.first}${employee.name.last}`
@@ -30,7 +36,7 @@ export default class EmployeeData extends Component {
         return (
             <>
             <SearchBar handleSearch = { this.handleSearch}/>
-         <DisplayArea employees={this.state.filteredEmployees} />    
+         <DisplayArea employees={this.state.filteredEmployees} handleSort={this.handleSort} />    
             </>
         )
         
