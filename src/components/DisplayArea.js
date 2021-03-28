@@ -1,10 +1,12 @@
 import React from "react";
+import "../styles/DisplayArea.css"
+
 function DisplayArea({ employees, handleSort }) {
   return (
     <table>
       <thead>
-        <tr>
-          <th
+        <tr> 
+          <th className="tableColumns"
             onClick={() => {
               handleSort("name");
             }}
