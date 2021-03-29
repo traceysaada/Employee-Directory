@@ -39,7 +39,7 @@ https://github.com/traceysaada/Employee-Directory
 
 ## link to Deployed page
 
-
+https://traceysaada.github.io/Employee-Directory/
 
 # Comments
 
